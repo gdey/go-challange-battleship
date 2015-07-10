@@ -157,4 +157,6 @@ type Game interface {
 	DidWin() bool
 	// Ended returns weather or not the games has ended. If the game has ended, entering more guesses will resulted in a error.
 	Ended() bool
+	// ShowBoard tells the game object that we want to show the board with all the ships revealed.
+	ShowBoard()
 }

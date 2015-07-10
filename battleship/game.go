@@ -2,6 +2,12 @@ package battleship
 
 import "io"
 
+// NewGame returns a new zero game object, filled in with default values.
+func NewGame() *G {
+	/* Fill in this Function */
+	return &G{}
+}
+
 // G represents the game, and the state of the game. This is the main structure the run loop should interact with.
 type G struct{}
 
@@ -59,8 +65,8 @@ func (g *G) DidWin() bool {
 	return false
 }
 
-// NewGame returns a new zero game object, filled in with default values.
-func NewGame() *G {
+// ShowBoard tells the game object that we want to show the board with all the ships revealed.
+func (g *G) ShowBoard() {
 	/* Fill in this Function */
-	return &G{}
+	return
 }

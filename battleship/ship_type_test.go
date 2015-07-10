@@ -19,8 +19,8 @@ func TestShipNames(t *testing.T) {
 		PatrolBoat:      ShipExpected{"PatrolBoat", "P*B"},
 	}
 	for ship, expected := range TestCases {
-		if ship.String() != expected.Expected {
-			t.Errorf("Expected %s to have string value of %s got %s instead.", expected.Name, expected.Expected, ship.String())
+		if ship.Mark() != expected.Expected {
+			t.Errorf("Expected %s to have string value of %s got %s instead.", expected.Name, expected.Expected, ship.Mark())
 		}
 	}
 

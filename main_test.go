@@ -44,6 +44,7 @@ type GameTest struct {
 func assertHits(t *testing.T, label string, expected, got []string) {
 	if len(expected) != len(got) {
 		t.Errorf("%s array size does not match. %v (%v) != %v (%v) ", label, expected, len(expected), got, len(got))
+		return // don't want to range over things if the sizes are not the same.
 	}
 	for i, val := range expected {
 		if val != got[i] {
